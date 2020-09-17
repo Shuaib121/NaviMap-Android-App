@@ -1,0 +1,4 @@
+App Link : https://play.google.com/store/apps/details?id=com.shuaib.navimap18005293
+
+To run the program, open project with android studio and navigate to the TestMap folder.
+Choose the folder and it should open the project, build the project and then click run.

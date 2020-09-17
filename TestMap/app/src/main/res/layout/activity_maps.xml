@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.shuaib.navimap18005293.MapsActivity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/white_border"
+        android:id="@+id/relLayout1">
+
+
+        <fragment android:id="@+id/autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/distanceTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="10dp"
+        android:textSize="24sp" />
+    <Switch
+        android:id="@+id/metric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distanceTime"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="10dp"
+        android:text="km/mi" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/relLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_gps"
+        android:src="@drawable/ic_gps"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/ic_gps"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_nvg"
+        android:src="@drawable/ic_nvg"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/ic_nvg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_drive"
+        android:src="@drawable/ic_drive"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/ic_drive"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_cycle"
+        android:src="@drawable/ic_cycle"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/ic_cycle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_walk"
+        android:src="@drawable/ic_walk"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/ic_walk"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_transit"
+        android:src="@drawable/ic_transit"/>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/hidden_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone" >
+
+
+        <ImageView
+            android:id="@+id/imagePlaces"
+            android:layout_width="match_parent"
+            android:layout_height="359dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_centerInParent="true"
+            android:onClick="slideUpDown" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
